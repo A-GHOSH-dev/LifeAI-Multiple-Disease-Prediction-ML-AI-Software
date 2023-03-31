@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'predictor'
+    'alz'
 ]
 
 MIDDLEWARE = [
@@ -126,7 +126,6 @@ STATICFILES_DIRS = [
 ]
 
 # Media Files
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
-
+MEDIA_URL = 'alz/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'alz/media')
 
