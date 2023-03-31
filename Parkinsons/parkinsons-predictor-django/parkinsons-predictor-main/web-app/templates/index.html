@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parkinson's Disease Prediction</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+    <div class="registration-form">
+        <form method="POST" action="{% url 'predict' %}">
+            {% csrf_token %}
+            <div class="form-icon">
+                <span><i class="icon icon-globe"></i></span>
+            </div>
+
+            <h3>Parkinson's Disease Prediction Tool</h3>
+            <br>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP:Fo(Hz)" placeholder="MDVP:Fo(Hz)" name="MDVP:Fo(Hz)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP:Fhi(Hz)" placeholder="MDVP:Fhi(Hz)" name="MDVP:Fhi(Hz)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP:Flo(Hz)" placeholder="MDVP:Flo(Hz)" name="MDVP:Flo(Hz)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP: Jitter(%)" placeholder="MDVP:Jitter(%)" name="MDVP:Jitter(%)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP: Jitter(Abs)" placeholder="MDVP: Jitter(Abs)" name="MDVP:Jitter(Abs)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP:RAP" placeholder="MDVP:RAP" name="MDVP:RAP" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP:PPQ" placeholder="MDVP:PPQ" name="MDVP:PPQ" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="Jitter:DDP" placeholder="Jitter:DDP" name="Jitter:DDP" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP:Shimmer" placeholder="MDVP:Shimmer" name="MDVP:Shimmer" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP:Shimmer(dB)" placeholder="MDVP:Shimmer(dB)" name="MDVP:Shimmer(dB)" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="Shimmer:APQ3" placeholder="Shimmer:APQ3" name="Shimmer:APQ3" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="Shimmer:APQ5" placeholder="Shimmer:APQ5" name="Shimmer:APQ5" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="MDVP:APQ" placeholder="MDVP:APQ" name="MDVP:APQ" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="Shimmer:DDA" placeholder="Shimmer:DDA" name="Shimmer:DDA" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="NHR" placeholder="NHR" name="NHR" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="HNR" placeholder="HNR" name="HNR" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="RPDE" placeholder="RPDE" name="RPDE" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="DFA" placeholder="DFA" name="DFA" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="spread1" placeholder="spread1" name="spread1" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="spread2" placeholder="spread2" name="spread2" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="D2" placeholder="D2" name="D2" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="PPE" placeholder="PPE" name="PPE" required>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn btn-block create-account"> Forecast </button>
+            </div>
+        </form>
+        {% if prediction == 0 or prediction == 1 %}
+        <div class="social-media">
+            <h5>Result:</h5>
+            <h4> 
+                This patient is
+                {% if prediction == 1 %}
+                    <span style="color: red;">
+                        at risk of having Parkinson's disease
+                    </span>
+                {% else %}
+                <span style="color: green;">
+                  not  at risk of having Parkinson's disease
+                </span>
+                {% endif %}
+            </h4>
+        </div>
+        {% endif %}
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>
