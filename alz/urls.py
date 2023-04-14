@@ -25,6 +25,13 @@ urlpatterns = [
     
     path('indexp', views.indexp, name="indexp"),
     path('ppredict/', views.ppredict, name="ppredict"),
+    
+    #end
+    
+    #lung
+    path('lhome', views.lhome, name="lhome"),
+    path('lresult/', views.lresult, name="lresult"),
+    #end
 ]
 
 if settings.DEBUG:

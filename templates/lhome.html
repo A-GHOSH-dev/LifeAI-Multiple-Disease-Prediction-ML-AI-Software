@@ -1,0 +1,122 @@
+{% extends 'main.html' %}
+
+{% block content  %}
+
+<form action="{% url 'lresult' %}">
+<div class="m-5">
+
+    <h1>Lung Cancer Test</h1>
+    <!-- begaining of the questions    -->
+
+    
+    <label class="form-label">Choose your Gender:</label>
+
+    <div class="mb-3">
+      <input type="radio" id="Male" name="Gender"
+             checked value="1">
+      <label for="Male">Male</label>
+    </div>
+
+    <div class="mb-3">
+      <input type="radio" id="Female" name="Gender" value="0">
+      <label for="Female">Female</label>
+    </div>
+  
+
+    <div  class="mb-3">
+    <label>
+        AGE 
+    </label>
+    <input  type="text" id="Age" name="Age" value="20">
+
+    </div>
+
+    <!-- Yes or No questions  -->
+
+    <p class="form-label" class="mb-3">Do you smoke ? </p>
+      <input type="radio" id="smoke_y" name="smoke" checked value="1">
+      <label for="smoke_y" class="form-label">YES</label>
+      <input type="radio" id="smoke_n" name="smoke" value="0">
+      <label for="smoke_n" class="form-label">NO</label>
+
+    <p class="form-label" class="mb-3">Do you have yellow fingers ? </p>
+      <input type="radio" id="fingers_y" name="fingers" checked value="1">
+      <label for="fingers_y">YES</label>
+      <input type="radio" id="fingers_n" name="fingers" value="0">
+      <label for="fingers_n">NO</label>
+
+    <p class="form-label" class="mb-3">Do you have ANXIETY ? </p>
+      <input type="radio" id="ANXIETY_y" name="ANXIETY" checked value="1">
+      <label for="ANXIETY_y">YES</label>
+      <input type="radio" id="ANXIETY_n" name="ANXIETY" value="0">
+      <label for="ANXIETY_n">NO</label>
+
+    <p class="form-label" class="mb-3">Do you have Peer pressure ? </p>
+      <input type="radio" id="Peer pressure_y" name="Peer pressure" checked value="1">
+      <label for="Peer pressure_y">YES</label>
+      <input type="radio" id="Peer pressure_n" name="Peer pressure" value="0">
+      <label for="Peer pressure_n">NO</label>
+
+    <p class="form-label" class="mb-3">Do you have chronic disease ? </p>
+      <input type="radio" id="chronic disease_y" name="chronic disease" checked value="1">
+      <label for="chronic disease_y">YES</label>
+      <input type="radio" id="chronic disease_n" name="chronic disease" value="0">
+      <label for="chronic disease_n">NO</label>
+
+    <p class="form-label" class="mb-3">Do you have fatigue ? </p>
+      <input type="radio" id="fatigue_y" name="fatigue" checked value="1">
+      <label for="fatigue_y">YES</label>
+      <input type="radio" id="fatigue_n" name="fatigue" value="0">
+      <label for="fatigue_n">NO</label>
+
+    <p class="form-label" class="mb-3">Do you have Allergy ? </p>
+      <input type="radio" id="Allergy_y" name="Allergy" checked value="1">
+      <label for="Allergy_y">YES</label>
+      <input type="radio" id="Allergy_n" name="Allergy" value="0">
+      <label for="Allergy_n">NO</label>
+
+    <p class="form-label" class="mb-3">Do you have wheezing ? </p>
+      <input type="radio" id="wheezing_y" name="wheezing" checked value="1">
+      <label for="wheezing_y">YES</label>
+      <input type="radio" id="wheezing_n" name="wheezing" value="0">
+      <label for="wheezing_n">NO</label>
+
+    <p class="form-label" class="mb-3">Do you drink alcohol ? </p>
+      <input type="radio" id="alcohol_y" name="alcohol" checked value="1">
+      <label for="alcohol_y">YES</label>
+      <input type="radio" id="alcohol_n" name="alcohol" value="0">
+      <label for="alcohol_n">NO</label>
+
+    <p class="form-label" class="mb-3">Do you have COUGHING ? </p>
+      <input type="radio" id="COUGHING_y" name="COUGHING" checked value="1">
+      <label for="COUGHING_y">YES</label>
+      <input type="radio" id="COUGHING_n" name="COUGHING" value="0">
+      <label for="COUGHING_n">NO</label>
+
+
+    <p class="form-label" class="mb-3">Do you have SHORTNESS OF BREATH ? </p>
+      <input type="radio" id="SHORTNESS OF BREATH_y" name="SHORTNESS OF BREATH" checked value="1">
+      <label for="SHORTNESS OF BREATH_y">YES</label>
+      <input type="radio" id="SHORTNESS OF BREATH_n" name="SHORTNESS OF BREATH" value="0">
+      <label for="SHORTNESS OF BREATH_n">NO</label>
+
+    <p class="form-label" class="mb-3">Do you have SWALLOWING DIFFICULTY ? </p>
+      <input type="radio" id="SWALLOWING DIFFICULTY_y" name="SWALLOWING DIFFICULTY" checked value="1">
+      <label for="SWALLOWING DIFFICULTY_y">YES</label>
+      <input type="radio" id="SWALLOWING DIFFICULTY_n" name="SWALLOWING DIFFICULTY" value="0">
+      <label for="SWALLOWING DIFFICULTY_n">NO</label>
+
+
+    <p class="form-label" class="mb-3">Do you have CHEST PAIN ? </p>
+      <input type="radio" id="CHEST PAIN_y" name="CHEST PAIN" checked value="1">
+      <label for="CHEST PAIN_y">YES</label>
+      <input type="radio" id="CHEST PAIN_n" name="CHEST PAIN" value="0">
+      <label for="CHEST PAIN_n">NO</label>
+
+
+</div>
+<input style="margin: 30px 40px;" type="submit" name="" value="submit" >
+    </form>
+
+
+{% endblock content %}
