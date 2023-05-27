@@ -1,7 +1,7 @@
 # LifeAI- Multiple Disease Predictor Software
 
-### Project Report
-https://drive.google.com/file/d/1ezYmiNRjdcCF68jLtffhkgJFI8Bx-jWI/view?usp=share_link
+# DETAILED PROJECT DESCRIPTION WITH SOFTWARE DETAILS AND WORKING DETAILS:
+https://docs.google.com/document/d/11l5T2HWUnI92e8AJZ6Fu08XlQhAhGgQqzfUmcS4_2kc/edit?usp=sharing
 
 ## Abstract
 
@@ -18,4 +18,6 @@ Learning Algorithms and BioInspired Algorithms along with Django to build this s
 - Diabetes Prediction- Supervised Learning with Crow Search Optimization
 - Parkinson’s Disease Prediction- Voice data based Support Vector Machine Algorithm
 - Lung Cancer prediction using XGBoost
+
+
 
