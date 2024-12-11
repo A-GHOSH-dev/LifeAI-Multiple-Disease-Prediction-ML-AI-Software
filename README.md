@@ -3,6 +3,8 @@
 # DETAILED PROJECT DESCRIPTION WITH SOFTWARE DETAILS AND WORKING DETAILS:
 https://docs.google.com/document/d/11l5T2HWUnI92e8AJZ6Fu08XlQhAhGgQqzfUmcS4_2kc/edit?usp=sharing
 
+https://drive.google.com/file/d/1BSp3ZCBek_L8_Qa7MDDSjvfTdzCrdceI/view?usp=sharing
+
 ## Abstract
 
 LifeAI- Multiple Disease Detection Software will be a platform for the users to fill their data and get to know
